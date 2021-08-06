@@ -5,15 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>form assisment</title>
-    <!-- <style>
-        td,label{
-            text-align: right;
-        }
+    <style>
         table{
-            width: 400px;
+            width: 600px;
             border: 1px solid black;
             margin: 0 auto;            
         } 
+         td,label{
+            text-align: left;
+        }
+        label{
+            text-align: right;
+        }
+        input{
+            width: 90%;}
+
+        span.opt{
+            width: 10px;
+    
+        }
+        
+        /*
+        
         td,.msg{
             font-size:x-small;
             text-align: left;
@@ -21,152 +34,134 @@
         td{
             margin-left: 10px;
         }
-        input{
-            width: 100%;
-        }
-    </style> -->
+        
+        } */
+    </style>
 </head>
 <body>
-    <form action="get">
+    <form action="[post]">
         <table cellspacing="5px" cellpadding="5%"> 
+          
 
             <div style="margin-bottom: 15px;">
+                <tr><td colspan="3"><h3>Personal Information</h3></td></tr>
                 <tr>
-                <h1>hello</h1>
-                <tr>
-                    <td><label for="fname">First : </label></td>
+                    <td><label for="fname">First Name: </label></td>
                     <td><input type="text" id="fname" name="fname" required></td>
                 </tr>
                 <tr>
-                    <td><label for="lname">Last :</label></td>
+                    <td><label for="lname">Last Name:</label></td>
                     <td><input type="text" id="lname" name="lname" required></td>
                 </tr>
-            </tr>
-            </div>
-            <div style="margin-bottom: 15px;">
                 <tr>
-                <td colspan="3"><h1>Mellooooo</h1></td>
+                    <td><label for="dob">Date of Birth:</label></td>
+                    <td>
+                        <span>
+                            <select name="month">
+                                <option>Month</option> 
+                                <option value="jan">January</option>    
+                                <option value="feb">February</option>        
+                            </select>
+                            <select name="day">
+                                <option>Day</option> 
+                                <option value="sum">Sunday</option>    
+                                <option value="mon">Monday</option>    
+                                <option value="tue">Tuesday</option>       
+                            </select>
+                            <select name="year">
+                                <option>Year</option>     
+                                <option value="2015">>2015</option>  
+                                <option value="2016">2016</option>  
+                                <option value="2017">2017</option>   
+                            </select><abbr title="mm/dd/yy">@</abbr>
+                        </span>
+                    </td>
                 </tr>
-                <div style="margin-left: 10px;">
                 <tr>
-                    <td><label for="fname">First : </label></td>
-                    <td><input type="text" id="fname" name="fname" required></td>
-                </tr>
-                <tr>
-                    <td><label for="lname">Last :</label></td>
-                    <td><input type="text" id="lname" name="lname" required></td>
-                </tr>
+                    <td><label for="gender">Gender:</label></td>
+                    <td><span><input type="radio" id="male" name="gender" value="male"><label for="male">Male</label></span>
+                    <span><input type="radio" id="female" name="gender" value="female"><label for="female">Female</label></span></td>
+                </tr> 
             </div>
-            </div>
+            
+<div><tr><td colspan="3"><h3>Account Information</h3></td></tr>
+    <tr>
+        <td><label for="email">Email: </label></td>
+        <td><input type="email" name="email" id="email" required><br>
+        <span>(your email address will be your username)</span></td>
+    </tr>
+    <tr>
+        <td><label for="re-email">Re-type Email: </label></td>
+        <td><input type="email" name="re-email" id="re-email" required></td>
+    </tr>
+    <tr>
+        <td><label for="password">Password: </label></td>
+        <td><input type="password" name="password" id="password" required><br>
+        <span class="msg">(Min. 8 characters. 1 number.case-sensitive)</span></td>
+    </tr>
+    <tr>
+        <td><label for="re-password">Re-type Password: </label></td>
+        <td><input type="password" name="re-password" id="re-password" required></td>
+    </tr>
+    <tr>
+        <td><label for="sec-ques">Security Question: </label></td>
+        <td>
+            <select name="security-ques">
+                <option value="q1">Question 1</option>
+                <option value="q2">Question 2</option>
+                <option value="q3">Question 3</option>
+            </select>
+            <abbr title="Select one Question">@</abbr>
+           
+        </td>
+    </tr>
+    <tr>
+        <td><label for="sec-ans">Security Answer: </label></td>
+        <td><input type="text" name="sec-ans" id="sec-ans"><br>
+        <span class="msg">(Not case-sensitive)</span>
+        </td>
+    </tr></div>
+<div><tr><td colspan="3"><h3>Contact Information</h3></td></tr>
+    <div style="margin-left: 20px;">
+    <tr>
+        <td><label for="address">Address: </label></td>
+        <td><input type="text" name="address" id="address"></td>
+    </tr>
+    <tr>
+        <td><label for="city">City: </label></td>
+        <td><input type="text" name="city" id="city"></td>
+    </tr>
+    <tr>
+        <td><label for="state">State: </label></td>
+        <!-- <td><input type="text" name="state" id="state"></td> -->
+        <td><select name="time">
+            <option value="punjab">Choose a state</option> 
+            <option value="punjab">Punjab</option>    
+            <option value="haryana">Haryana</option>    
+            </select>
+        </td>
+    </tr>
+    <tr>
+         <td><label for="zipcode">Zip Code: </label></td>
+        <td><span><input type="text" name="zipcode" id="zipcode" minlength="4" maxlength="6"><input type="text" name="optional" value="optional" disabled></span></td>
+    </tr>
+    <tr>
+        <td><label for="phone">Phone: </label></td>
+        <span><td><input type="tel" name="phone" id="phone"><br>
+            <span class="msg">No space or dashes</span></td>
+        <td>
+            <select name="mobile">
+                <option value="and">Android</option>
+                <option value="apl">Apple</option>
+            </select>    
+        </td></span>
 
+    </tr></div>
+</div>
+           
+            
             <tr>
-                <td><label for="fname">First Name: </label></td>
-                <td><input type="text" id="fname" name="fname" required></td>
-            </tr>
-            <tr>
-                <td><label for="lname">Last Name:</label></td>
-                <td><input type="text" id="lname" name="lname" required></td>
-            </tr>
-            <tr>
-                <td><label for="dob">Date of Birth:</label></td>
-                <td>
-                    <span>
-                        <select name="month">
-                            <option>Month</option> 
-                            <option value="jan">January</option>    
-                            <option value="feb">February</option>        
-                        </select>
-                        <select name="day">
-                            <option>Day</option> 
-                            <option value="sum">Sunday</option>    
-                            <option value="mon">Monday</option>    
-                            <option value="tue">Tuesday</option>       
-                        </select>
-                        <select name="year">
-                            <option>Year</option>     
-                            <option value="2015">>2015</option>  
-                            <option value="2016">2016</option>  
-                            <option value="2017">2017</option>   
-                        </select><abbr title="mm/dd/yy">@</abbr>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td><label for="gender">Gender:</label></td>
-                <td><span><input type="radio" id="male" name="gender" value="male"><label for="male">Male</label></span>
-                <span><input type="radio" id="female" name="gender" value="female"><label for="female">Female</label></span></td>
-            </tr> 
-            <tr>
-                <td><label for="email">Email: </label></td>
-                <td><input type="email" name="email" id="email" required><br>
-                <span>(your email address will be your username)</span></td>
-            </tr>
-            <tr>
-                <td><label for="re-email">Re-type Email: </label></td>
-                <td><input type="email" name="re-email" id="re-email" required></td>
-            </tr>
-            <tr>
-                <td><label for="password">Password: </label></td>
-                <td><input type="password" name="password" id="password" required><br>
-                <span class="msg">(Min. 8 characters. 1 number.case-sensitive)</span></td>
-            </tr>
-            <tr>
-                <td><label for="re-password">Re-type Password: </label></td>
-                <td><input type="password" name="re-password" id="re-password" required></td>
-            </tr>
-            <tr>
-                <td><label for="sec-ques">Security Question: </label></td>
-                <td>
-                    <select name="security-ques">
-                        <option value="q1">Question 1</option>
-                        <option value="q2">Question 2</option>
-                        <option value="q3">Question 3</option>
-                    </select><abbr title="Select one Question">@</abbr>
-                   
-                </td>
-            </tr>
-            <tr>
-                <td><label for="sec-ans">Security Answer: </label></td>
-                <td><input type="text" name="sec-ans" id="sec-ans"><br>
-                <span class="msg">(Not case-sensitive)</span>
-                </td>
-            </tr>
-            <tr>
-                <td><label for="address">Address: </label></td>
-                <td><input type="text" name="address" id="address"></td>
-            </tr>
-            <tr>
-                <td><label for="city">City: </label></td>
-                <td><input type="text" name="city" id="city"></td>
-            </tr>
-            <tr>
-                <td><label for="state">State: </label></td>
-                <!-- <td><input type="text" name="state" id="state"></td> -->
-                <td><select name="time">
-                    <option value="punjab">Choose a state</option> 
-                    <option value="punjab">Punjab</option>    
-                    <option value="haryana">Haryana</option>    
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td><label for="zipcode">Zip Code: </label></td>
-                <td><span><input type="number" name="zipcode" id="zipcode" max="6"></span><span><input type="text" name="optional" value="optional" disabled></span></td>
-            </tr>
-            <tr>
-                <td><label for="phone">Phone: </label></td>
-                <span><td><input type="tel" name="phone" id="phone">
-                    <span class="msg">No space or dashes</span></td>
-                <td>
-                    <select name="mobile">
-                        <option value="and">Android</option>
-                        <option value="apl">Apple</option>
-                    </select>    
-                </td></span>
-
-            </tr>
-            <tr>
-                <td><input type="submit"></td>
+                <td><input type="submit" value="submit"></td>
             </tr>
 
         </table>

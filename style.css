@@ -1,8 +1,12 @@
+header{
+    
+}
+
 h1{
     text-align: center;
 }
-.footer{
-    width: 1000px;
+footer{
+
     height: 300px;
     background-color: rgb(244,243,248);
     text-align: center;
@@ -17,6 +21,7 @@ ul
 }
 li{
      float: left;
+     line-height: 2.0;
     padding: 5px 20px;
 } 
 
