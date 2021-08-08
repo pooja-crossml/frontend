@@ -1,0 +1,33 @@
+table{
+    background-color: rgb(250, 248, 248);
+    width: 45%;
+    border: 1px solid black;
+    margin: 0 auto; 
+    font-size: 14px;           
+} 
+label{ 
+    display: block;
+    text-align: right;
+}
+input{
+    width: 80%;
+
+}
+input[radio]{
+    display: inline-block;
+}
+select{
+    margin-right: 10px;
+    width: 25%;   
+}
+
+.tooltip{
+    font-size:20px;
+    color:rgb(6, 159, 170);
+    border-radius: 50%;
+    
+}
+h3{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}

@@ -5,35 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>form assisment</title>
-    <style>
-        table{
-            width: 50%;
-            border: 1px solid black;
-            margin: 0 auto;            
-        } 
-         td,label{
-            text-align: left;
-        }
-        label{
-            text-align: right;
-        }
-        input{
-            width: 90%;}
-
-        span .opt{
-            width: 10px;
-    
-        }
-
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="form_style.css">
 </head>
 <body>
     <form action="[post]">
         <table cellspacing="5px" cellpadding="5%"> 
-          
-
             <div style="margin-bottom: 15px;">
-                <tr><td colspan="3"><h3>Personal Information</h3></td></tr>
+                <tr><td colspan="2"><h3>Personal Information</h3></td></tr>
                 <tr>
                     <td><label for="fname">First Name: </label></td>
                     <td><input type="text" id="fname" name="fname" required></td>
@@ -46,34 +25,39 @@
                     <td><label for="dob">Date of Birth:</label></td>
                     <td>
                         <span>
-                            <select name="month">
+                            <select name="month" required>
                                 <option>Month</option> 
                                 <option value="jan">January</option>    
                                 <option value="feb">February</option>        
                             </select>
-                            <select name="day">
+                            <select name="day" required>
                                 <option>Day</option> 
                                 <option value="sum">Sunday</option>    
                                 <option value="mon">Monday</option>    
                                 <option value="tue">Tuesday</option>       
                             </select>
                             <select name="year">
-                                <option>Year</option>     
+                                <option>Year</option required>     
                                 <option value="2015">2015</option>  
                                 <option value="2016">2016</option>  
                                 <option value="2017">2017</option>   
-                            </select><abbr title="mm/dd/yy">@</abbr>
+                            </select>
+                            <span title="mm/dd/yy" class="tooltip"><i class="fa fa-question-circle"></i></span>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td><label for="gender">Gender:</label></td>
-                    <td><span><input type="radio" id="male" name="gender" value="male"><label for="male">Male</label></span>
-                    <span><input type="radio" id="female" name="gender" value="female"><label for="female">Female</label></span></td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="male" style="width:15px; float: left; "><label for="male" class="gender" style="width:40px; float: left; margin-right: 20px;">Male</label>
+                        <input type="radio" id="female" name="gender" value="female" style="width:15px; float: left;margin-right: 20px;"><label for="female" style="float: left;">Female</label>
+                    </td>
                 </tr> 
             </div>
             
-<div><tr><td colspan="3"><h3>Account Information</h3></td></tr>
+            <div>
+                <tr>
+                    <td colspan="2"><h3>Account Information</h3></td></tr>
     <tr>
         <td><label for="email">Email: </label></td>
         <td><input type="email" name="email" id="email" required><br>
@@ -95,22 +79,21 @@
     <tr>
         <td><label for="sec-ques">Security Question: </label></td>
         <td>
-            <select name="security-ques">
-                <option value="q1">Question 1</option>
-                <option value="q2">Question 2</option>
-                <option value="q3">Question 3</option>
+            <select name="security-ques" style="width: 80%;" required>
+                <option>Select a Security Question</option>
             </select>
-            <abbr title="Select one Question">@</abbr>
+            <span title="Select one Question" class="tooltip"><i class="fa fa-question-circle"></i></span>
            
         </td>
     </tr>
     <tr>
         <td><label for="sec-ans">Security Answer: </label></td>
-        <td><input type="text" name="sec-ans" id="sec-ans"><br>
+        <td><input type="text" name="sec-ans" id="sec-ans" required><br>
         <span class="msg">(Not case-sensitive)</span>
         </td>
-    </tr></div>
-<div><tr><td colspan="3"><h3>Contact Information</h3></td></tr>
+                </tr>
+            </div>
+            <div><tr><td colspan="2"><h3>Contact Information</h3></td></tr>
     <div style="margin-left: 20px;">
     <tr>
         <td><label for="address">Address: </label></td>
@@ -122,9 +105,8 @@
     </tr>
     <tr>
         <td><label for="state">State: </label></td>
-        <!-- <td><input type="text" name="state" id="state"></td> -->
-        <td><select name="time">
-            <option value="punjab">Choose a state</option> 
+        <td><select name="state" required style="width: 80%;">
+            <option>Choose a state</option> 
             <option value="punjab">Punjab</option>    
             <option value="haryana">Haryana</option>    
             </select>
@@ -132,28 +114,24 @@
     </tr>
     <tr>
          <td><label for="zipcode">Zip Code: </label></td>
-        <td><span><input type="text" name="zipcode" id="zipcode" minlength="4" maxlength="6"><input type="text" name="optional" value="optional" disabled></span></td>
+        <td><input type="text" name="zipcode" id="zipcode" minlength="4" maxlength="6" required style="width: 20%;">
+            <input type="text" name="optional" value="optional" disabled style="width: 20%; margin-left: 20px;"></td>
     </tr>
     <tr>
         <td><label for="phone">Phone: </label></td>
-        <span><td><input type="tel" name="phone" id="phone"><br>
-            <span class="msg">No space or dashes</span></td>
-        <td>
-            <select name="mobile">
-                <option value="and">Android</option>
-                <option value="apl">Apple</option>
-            </select>    
-        </td></span>
-
-    </tr></div>
-</div>
-           
-            
-            <tr>
-                <td><input type="submit" value="submit"></td>
-            </tr>
-
-        </table>
+        <span><td><input type="tel" name="phone" id="phone" style="width: 40%; margin-right: 10px;" required>
+            <span title="Enter mobile number" class="tooltip"><i class="fa fa-question-circle"></i></span>
+            <select name="mobile" style="margin-left: 10px;" >
+                <option>Mobile</option>
+            </select><br>
+            <span class="msg">No space or dashes</span>
+            </td></span>
+        </tr></div>
+        </div>
+<tr><td></td><td><input type="submit" value="submit" style="width: 30%; margin-right: 30px; background-color: rgb(6, 159, 170); height: 30px; border-radius: 10px;">
+    <input type="reset" style="width: 30%; background-color: rgb(6, 159, 170); height: 30px; border-radius: 10px;"></td>
+</tr>
+    </table>
     </form>
 </body>
 </html>            
