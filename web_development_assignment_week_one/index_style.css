@@ -3,13 +3,11 @@ body{
     font-weight: 400px;
     font-style: normal;
     font-size: 15px;
-    line-height: 2;
+    /* line-height: 1; */
     color: #333;
     overflow-x: hidden!important;
 }
-header{
-    position: fixed;
-}
+
 h1{
     text-align: center;
     font-size: 40px;
@@ -19,6 +17,7 @@ img{
     height: auto;
 }
 section{
+    line-height: 2;
     min-height:900px;
     box-sizing: border-box;
 }
