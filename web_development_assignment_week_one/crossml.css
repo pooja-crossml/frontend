@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 *{
     margin: 0px;
     font-family: "Roboto","Open Sans",sans-serif;
@@ -9,6 +12,7 @@
     /* overflow-x: hidden!important; */
     
 }
+>>>>>>> d51ed940f3a008f7117792fe826367c4d9cd1e08
 /* navigation Section */
 header{
     position: fixed;
@@ -20,8 +24,13 @@ nav{
     margin-top: 10px;
 }
 .navbar .logo a img{
+<<<<<<< HEAD
+    height: 40px;
+    /* width: 10px; */
+=======
     height: 50px;
     width: 180px;
+>>>>>>> d51ed940f3a008f7117792fe826367c4d9cd1e08
 }
 .navbar{
     list-style: none;
@@ -49,6 +58,15 @@ nav{
     font-size: 16px;
     text-decoration: none;
 }
+<<<<<<< HEAD
+/* .navbar-right{
+    float: right;
+} */
+.navbar-right .nav-text{
+    float: left;
+    margin-right: 40px;
+    /* padding: 10px; */
+=======
 .navbar-right{
     /* float: right; */
 }
@@ -56,6 +74,7 @@ nav{
     float: left;
     margin-right: 40px;
     padding: 10px;
+>>>>>>> d51ed940f3a008f7117792fe826367c4d9cd1e08
 }
 .navbar-right .nav-text button a{
     font-weight: 700;
@@ -66,7 +85,11 @@ nav{
     text-decoration: none;
 }
 .navbar-right .nav-text button{
+<<<<<<< HEAD
+    border: none;
+=======
     /* border: none; */
+>>>>>>> d51ed940f3a008f7117792fe826367c4d9cd1e08
     background-color: #f44336;
     border-color: #f44336;
     border-radius: 30px;
@@ -79,6 +102,8 @@ nav{
   /* margin: 4px 2px; */
   cursor: pointer;
 
+<<<<<<< HEAD
+=======
 }
 
 
@@ -176,4 +201,5 @@ footer .low-nav{
 }
 footer div h2{
     text-align: left;
+>>>>>>> d51ed940f3a008f7117792fe826367c4d9cd1e08
 }
