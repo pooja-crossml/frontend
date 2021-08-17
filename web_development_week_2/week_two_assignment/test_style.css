@@ -40,12 +40,13 @@ box-shadow: 5px 10px #888888;
 .hr_line_f {
     display: flex;
     flex-direction: row;
+    width: 95%;
 }
 
 .hr_line_f:after {
     content: "";
     flex: 1 1;
-    border-bottom: 1px solid rgb(97, 96, 96);
+    border-bottom: 1px solid rgb(161, 159, 159);
     margin: auto;
 }
 
